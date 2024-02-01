@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const opts = {
   rootDir: process.cwd(),
@@ -49,6 +50,10 @@ module.exports = {
         { from: "src/fonts", to: "fonts" },
         { from: "src/img", to: "img" }
       ]
+    }),
+    new HtmlWebpackPlugin({
+      template: './static/index.html',  // 사용할 HTML 템플릿 파일 경로
+      filename: 'index.html',  // 생성될 HTML 파일 이름
     }),
     // Copy dist folder to static
     ...(process.env.NODE_ENV === "production")? [

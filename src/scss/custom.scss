@@ -1,0 +1,1575 @@
+@charset "UTF-8";
+/*
+#################### common ####################
+*/
+body {
+    font-size: 1rem;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	 	 transition: background-color 5000s ease-in-out 0s;
+		 -webkit-transition: background-color 9999s ease-out;
+    	 -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+input:focus, textarea:focus {
+    background-color: transparent!important;
+    outline: 0!important;
+    box-shadow: none!important;
+}
+.form-check-input:checked:focus[type="radio"] {
+    background-color: #3B7DDD!important;
+}
+
+ol, ul, dl {
+    padding: 0;
+
+    li {
+       list-style: none;
+       padding: 0;
+    }
+}
+
+// select :: cf => https://blog.logrocket.com/creating-custom-select-dropdown-css/#adding-custom-arrow-native-select-dropdown
+.custom-select {
+    position: relative;
+
+    &::before,
+    &::after {
+        --size: 0.3rem;
+        content: "";
+        position: absolute;
+        right: 1.6rem;
+        pointer-events: none;
+    }
+
+    &::before {
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-bottom: var(--size) solid black;
+        top: 40%;
+    }
+
+    &::after {
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-top: var(--size) solid black;
+        top: 55%;
+    }
+}
+
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    padding: 0.6rem 0.8rem;
+    margin: 0;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    width: 50%;
+
+    &:hover {
+        border-color: #888;
+    }
+
+    &:focus {
+        border-color: #aaa;
+        box-shadow: none;
+        box-shadow: none -moz-mac-focusring;
+        color: #222;
+        outline: none;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+
+// label
+
+
+// status label
+
+// 임시저장 
+.stat-saved {
+	border: 1px solid #6c757d;
+	color: #212529;
+	background-color: transparent;
+}
+
+// 주문완료 
+.stat-order-fin {
+	border: 1px solid #17a2b8;
+	color: #17a2b8;
+	background-color: transparent;
+}
+
+// 정산확인 
+.stat-confirm {
+	border: 1px solid #3B7DDD;
+	color: #3B7DDD;
+	background-color: transparent;
+}
+
+// 발송대기 
+.stat-send-wait {
+	border: 1px solid #1cbb8c;
+	color: #1cbb8c;
+	background-color: transparent;
+}
+
+// 발송완료 
+.stat-fin {
+	border: 1px solid #1cbb8c;
+	color: #fff;
+	background-color: #1cbb8c;
+}
+
+// 발송취소 
+.stat-canceled {
+	border: 1px solid #6c757d;;
+	color: #fff;
+	background-color: #6c757d;
+}
+
+
+// text-overflow ellipsis
+
+@mixin ellipsis-base {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+
+.ellipsis-90 {
+    @include ellipsis-base;
+    max-width: 90px;
+}
+
+.ellipsis-140 {
+    @include ellipsis-base;
+    max-width: 140px;
+}
+
+.ellipsis-180 {
+    @include ellipsis-base;
+    max-width: 180px;
+}
+.ellipsis-300 {
+    @include ellipsis-base;
+    max-width: 300px;
+}
+
+// pagination
+@mixin pagin-arr-base {
+    content: "";
+    border: solid;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 0.25rem;
+    vertical-align: 0;
+}
+.pagination-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    margin: 1.5rem 0 0.5rem;
+
+    .pagination {
+        border-radius: 0.2rem;
+        position: relative;
+        display: inline-flex;
+
+        &__btn {
+            border: 1px solid #ccc;
+            color: #212529;
+            background-color: transparent;
+            padding: 0.4rem 0.8rem;
+
+            &:hover {
+                background-color: #efefef;
+            }
+            &.active {
+                border: 1px solid #212529;
+                background-color: #212529;
+                color: #fff;
+                &:hover {
+                    background-color: #212529;
+                }
+            }
+            
+        }
+
+        &__btn:first-child {
+            border-top-left-radius: 0.4rem;
+            border-bottom-left-radius: 0.4rem;
+            padding-right: 0.5rem;
+
+            &:after {
+                @include pagin-arr-base;
+                transform: rotate(135deg);
+            }
+        }
+        &__btn:last-child {
+            border-top-right-radius: 0.4rem;
+            border-bottom-right-radius: 0.4rem;
+            padding-left: 0.5rem;
+
+            &:after {
+                @include pagin-arr-base;
+                transform: rotate(315deg);
+            }
+        }
+        &__btn:not(:first-child) {
+            margin-left: -1px;
+        }
+        &__btn:first-child, &__btn:last-child {
+
+        }
+    }
+}
+
+// alert
+.alert {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    width: 25%;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    
+    color: #fff;
+    display: flex;
+    padding: 0;
+    
+    &__message {
+        box-sizing: border-box;
+        padding: 0.95rem;
+        width: 100%;
+    }
+    
+    & .btn-close {
+        padding: 1.1875rem 0.95rem;
+        position: absolute;
+        right: 0;
+        top: -4px;
+        z-index: 2;
+        cursor: pointer;
+        color: #fff!important;
+        background-image: none;
+
+        &:focus:not(:focus-visible) {
+            box-shadow: none;
+        }
+    }
+
+    &.suc {
+        background-color: #1c5da8;
+    }
+    &.ready {
+        background-color: #fcb92c;
+        color: #000;
+
+        & .btn-close {
+            color: #000;
+        }
+    }
+    &.fail {
+        background-color: #6c757d;
+    }
+
+}
+
+
+// animate
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+
+  
+
+  @-webkit-keyframes fadeOutDown {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  .animate__fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+    animation-duration: 2s;
+  }
+
+/*
+#################### common ####################
+*/
+
+
+
+/*
+#################### sidebar ####################
+*/
+
+[data-simplebar] {
+    width: 220px;
+}
+
+.sidebar {
+    min-width: 220px;
+    max-width: 220px;
+
+    &.collapsed {
+        margin-left: -220px;
+    } 
+}
+
+.sidebar-item.active > .sidebar-link, .sidebar-item.active .sidebar-link:hover {
+    // border-left-color: #cf2e46;
+}
+
+
+/*
+#################### footer regular ####################
+*/
+.main footer.footer {
+    font-size: 14px;
+}
+
+
+/*
+#################### main ####################
+*/
+
+
+.content.main {
+    
+    @media (min-width: 992px){
+        padding: 1.4rem 1.6rem 1.4rem 2rem;
+    }
+
+    .row {
+        min-width: 1080px;
+
+        &.first-row {
+            margin-bottom: 1rem;
+        }
+
+        .tbl-overflow {
+            overflow: auto;
+            width: 49.25%!important;
+            padding: 0;
+            border-radius: 1rem;
+          
+            &.end {
+                margin-left: 1rem;
+            }
+            
+            .card {
+                padding: 0;
+    
+                & .card-header {
+                    padding: 1.5rem 1rem 0.5rem;
+                    
+                    & .card-title {
+                        font-size: 1.25rem;
+                        color: #000;
+                        padding: 0.5rem;
+                    }
+                }
+    
+                & table.table {
+                    & thead {
+                        & tr {
+                            & th {
+
+                                &:first-child {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+
+                    & tbody {
+                        & tr {
+                            cursor: pointer;
+                            &:last-child td {
+                                border: 0;
+                            }
+
+                            & td {
+                                &:first-child {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .tbl-minw-1100 {
+                min-width: 600px !important;
+                margin-bottom: 0!important;
+            
+                & tbody tr td:nth-child(3), & tbody tr td:nth-child(4) {
+                    max-width: 148px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+              
+            .tbl-minw-auto {
+                min-width: 600px !important;
+                margin-bottom: 0!important;
+            }
+    
+    
+        }
+    }
+
+    // main direct-menu
+    & .direct-menu {
+        padding: 0;
+
+        .card {
+            
+            & > span {
+                font-size: 0.9rem;
+            }
+
+            & .card-body {
+
+                & .grid-comp > div {
+                    background-repeat: no-repeat;
+                }
+                & .grid-comp:nth-child(1) > div {
+                    background-image: url('../img/direct-bg01.png');
+                    background-position: 94% -30%;
+                }
+                & .grid-comp:nth-child(2) > div {
+                    background-image: url('../img/direct-bg02.png');
+                    background-position: 94% -8%;
+                    background-size: 6rem;
+                }
+                & .grid-comp:nth-child(3) > div {
+                    background-image: url('../img/direct-bg03.png');
+                    background-position: 94% -50%;
+                    background-size: 5rem;
+                }
+                & .grid-comp:nth-child(4) > div {
+                    background-image: url('../img/direct-bg04.png');
+                    background-position: 94% -60%;
+                    background-size: 5rem;
+                }
+            }
+        }
+    }
+
+    & .main-tbl {
+        padding: 0;
+
+        .card {
+            min-width: 600px;
+
+            & .card-header{
+
+                padding-bottom: 0;
+            }
+
+            & table.table {
+
+                & thead {
+
+                    & tr {
+                        text-align: center;
+
+                        & th {
+                            min-width: 52px;
+                        }
+                    }
+                }
+
+                & tbody tr {
+
+                    text-align: center;
+                    cursor: pointer;
+
+                    & td:nth-child(3), & td:nth-child(4) {
+                        max-width: 148px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                
+            }
+        }
+        // 메인 테이블 중 가운데 정렬 필요한 tbody tr td = 이벤트명, 문의내용, 공지사항
+        & .row {
+            // 이벤트명
+            & .col-12:nth-child(1) tbody tr td:nth-child(3) {
+                text-align: left;
+            }
+            // 문의내용
+            & .col-12:nth-child(2) tbody tr td:nth-child(3) {
+                text-align: left;
+            }
+            // 공지사항
+            & .col-12:nth-child(4) tbody tr td:nth-child(3) {
+                text-align: left;
+            }
+        }
+    }
+
+    & .main-enterprise-tbl {
+
+        font-size: 0.9rem;
+
+        .card {
+
+            & .card-header {
+                padding-top: 28px;
+            }
+
+            & .card-body {
+                padding: 0 1.25rem 1.25rem;
+            }
+
+            min-width: 100%;
+
+            & table.table {
+
+                & tbody tr {
+
+                    & td:nth-child(2), & td:nth-child(3), & td:nth-child(4) {
+                        max-width: 148px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+
+        
+        & .row {
+            min-width: unset;
+
+            &:first-child {
+
+                & > div .card {
+                    -webkit-overflow-scrolling: touch;
+                    -ms-overflow-style: -ms-autohiding-scrollbar;
+                }
+                
+                & > div:nth-child(1) .card {
+
+                    overflow: auto;
+
+                    & .card-body {
+                        min-width: 512px;
+                    }
+                }
+                & > div:nth-child(4) .card {
+
+                    overflow: auto;
+
+                    & .card-body {
+                        min-width: 408.6px;
+                    }
+                }
+            }
+
+            &.direct {
+
+                & .card-header {
+                    padding: 2.5rem 1.25rem;
+                    background-repeat: no-repeat;
+
+                    @media (max-width: 1439px){
+                        & a {
+                            text-align: center;
+                            display: block;
+                        }
+                    }
+                }
+
+                & > div:nth-child(1) .card-header {
+                    background-position: 94% -30%;
+                    background-image: url('../img/direct-bg01.png');
+                }
+                & > div:nth-child(2) .card-header {
+                    background-image: url(../img/direct-bg02.png);
+                    background-position: 94% -8%;
+                    background-size: 6rem;
+                }
+                & > div:nth-child(3) .card-header {
+                    background-image: url(../img/direct-bg03.png);
+                    background-position: 94% -50%;
+                    background-size: 5rem;
+                }
+                & > div:nth-child(4) .card-header {
+                    background-image: url(../img/direct-bg04.png);
+                    background-position: 94% -60%;
+                    background-size: 5rem;
+                }
+
+            }
+
+            @media (max-width: 767px) {
+                & > div {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/*
+#################### navbar ####################
+*/
+
+.navbar {
+
+    &__menu {
+
+        margin-left: 2rem;
+        &__ul {
+            display: flex;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            flex-direction: row;
+
+            &__li {
+                position: relative;
+
+                &__a {
+                    display: block;
+                    padding: 0.5rem;
+                    color: #495057;
+                    background: none;
+                    border: 0;
+                    font-size: 1rem;
+
+                    &::after {
+                        display: inline-block;
+                        margin-left: 0.255em;
+                        margin-right: 1rem;
+                        vertical-align: 0.1em;
+                        content: "";
+                        border-top: 0.3em solid;
+                        border-right: 0.3em solid rgba(0,0,0,0);
+                        border-bottom: 0;
+                        border-left: 0.3em solid rgba(0,0,0,0);
+
+                        padding: 0;
+                        transform: unset;
+                    }
+                    &:hover {
+                        color: rgba(0,0,0,0.9);
+                    }
+                }
+                &.active > a {
+                    font-weight: 800;
+                }
+                & .dropdown-menu {
+                    display: none;
+                    border: 0;
+                    margin-top: 0;
+                    border-radius: 0.375rem;
+                    padding: 0;
+                    position: absolute;
+                    overflow: visible;
+                    left: -0.5625rem;
+                    top: 2.5rem;
+                    /*
+                    box-shadow: 0 -7px 9px 0 rgba(169, 184, 200, .15);
+                    -webkit-box-shadow: 0 0.25rem 1rem 0rem rgba(169, 184, 200, 1);
+                    -moz-box-shadow: 0 0.25rem 1rem 0rem rgba(169, 184, 200, 1);
+                    */
+                    font-size: 0.875px;
+                    color: #495057;
+                    border: 1px solid rgba(0, 0, 0, 0.125);
+                    border-radius: 0.2rem;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+
+                    &__canvas {
+                        border-radius: 0.375rem;
+                        padding: 1rem 0;
+                        z-index: 1000;
+
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        color: #5e6e82;
+                        
+                        box-shadow: none;
+                        background-color: #fff;
+                        border: 0;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            width: 1rem;
+                            height: 1rem;
+                            background: inherit;
+                            top: -0.5rem;
+                            left: 1.8rem;
+                            transform: rotate(45deg);
+                            border-radius: 0.125rem;
+                            border-width: 1px 0 0 1px;
+                            border-style: solid;
+                            border-color: rgba(0, 0, 0, 0.175);;
+                            display: block;
+                        }
+
+                        &__item {
+                            border: 0;
+                            background-color: rgba(0,0,0,0);
+                            white-space: nowrap;
+                            text-align: inherit;
+                            clear: both;
+                            padding: 0.2rem 2.4rem;
+                            margin: 0.3rem 0;
+                            width: 100%;
+                            display: block;
+                            font-size: 1rem;
+                            color: #495057;
+
+                            &:hover {
+                                background-color: #f9fafd;
+                                color: #232e3c;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .dropdown-menu {
+                    display: block;
+                }
+                &:hover .dropdown-toggle {
+                    color: rgba(0, 0, 0, 0.9);
+                }
+            }
+        }
+    }
+
+    & .navbar-nav {
+        & .nav-item {
+            & .dropdown-menu {
+                box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+
+/*
+#################### direct button ####################
+*/
+
+.direct-wrap {
+    position: relative;
+
+    & button {
+        border: 0;
+        color: #fff;
+        background-color: #1c5da8;
+        position: fixed;
+        bottom: 4%;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        right: 2%;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+
+        & svg {
+            width: 2rem;
+            height: 2rem;
+            stroke-width: 0.16rem;
+        }
+    }
+
+    & .direct-menu-wrap {
+        display: none;
+        position: fixed;
+        bottom: 7rem;
+        right: 2rem;
+
+        &.show {
+            display: block;
+        }
+        
+        & .direct-menu {
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            font-size: 14px;
+
+            &__item {
+                text-align: center;
+                display: flex;
+                width: 6rem;
+                height: 6rem;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgba(0,0,0,0.125);
+                border-bottom: 0;
+                color: #495057;
+                flex-direction: column;
+
+                &:hover {
+                    background-color: #f9fafd;
+                    color: #232e3c;
+                    text-decoration: none;
+                    border-bottom: 1px solid rgba(0,0,0,0.125);
+                    // color: #495057;
+                    // border: 1px solid #495057;
+
+                }
+                &:hover + a {
+                    border-top: 0;
+                }
+                &:last-child {
+                    border-bottom: 1px solid rgba(0,0,0,0.125);
+                    &:hover {
+                        // border: 1px solid #495057;
+                        background-color: #f9fafd;
+                        color: #232e3c;
+                    }
+                }
+
+                & svg {
+                    display: block;
+                    width: 2rem;
+                    height: 2rem;
+                    stroke-width: 1;
+                    color: #777;
+                }
+                & > p {
+                    margin: 0.25rem 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+#################### adminIcon ####################
+*/
+// .sidebar-item.active > .sidebar-link
+.adminIcon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    left: 36px;
+    background-color: #222E3C;
+    border-radius: 50%;
+
+    & svg {
+        width: 100%;
+        height: 100%;
+        margin-right: 0 !important;
+        margin-top: -6px;
+    }
+}
+
+
+
+/*
+#################### login ####################
+*/
+
+.container.loginpage {
+    font-size: 14px;
+
+    & .row {
+        align-items: end;
+
+        & .d-table {
+            height: 80%;
+
+            .bd-radius-1r {
+                border-radius: 0.6rem;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                margin: 0;
+    
+                & .label {
+                    text-align: center;
+                    padding: 2rem;
+                    border-top-left-radius: 0.6rem;
+                    border-top-right-radius: 0.6rem;
+                    position: relative;
+    
+                    &__bg-color {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to right, #b93452, #445392, #445392, #445392, #445392);
+                        z-index: 1;
+                        left: 0;
+                        border-top-left-radius: 0.6rem;
+                        border-top-right-radius: 0.6rem;
+                    }
+                    
+                    &__bg-ptn {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url('../img/logobg-100p.png');
+                        background-repeat: no-repeat;
+                        background-position-y: 65%;
+                        z-index: 2;
+                        left: 0;
+                        border-top-left-radius: 0.6rem;
+                        border-top-right-radius: 0.6rem;
+                        opacity: 0.3;
+                    }
+    
+                    &__sub, &__ttl {
+                        margin: 0;
+                        z-index: 4;
+                        position: relative;
+                    }
+                    
+                    &__sub {
+                        color: #fff;
+                        font-weight: 200;
+                        font-size: 1rem;
+                    }
+                }
+    
+                & .card-body  {
+                    padding: 1rem;
+    
+                    & .form-el {
+    
+                        & .btn-signin {
+                            margin: 2rem auto;
+                            width: 100%;
+                
+                            & a.btn {
+                                display: block;
+                                padding: 0.8rem;
+                                background-color: #1c5da8;
+                                border-radius: 0;
+                            }
+                        }
+                        & .form-control {
+                            padding: 0.8rem;
+                            border-radius: 0;
+    
+                            &:focus {
+                                border-color: #dee2e6;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+    
+                    & .guide {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        & .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+
+            & img, &__mention {
+                display: inline-block;
+            }
+            & img {
+                width: 5rem;
+                margin-right: 1rem;
+            }
+            &__mention {
+    
+                & p {
+                    margin: 0!important;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+#################### order-general +send-management ####################
+*/
+
+.content.order-general, .content.send-management, .content.popup-wrap {
+
+    .card.od-gen {
+        overflow: auto;
+
+        & > .card-header {
+            padding: 2rem 1.25rem 0;
+
+            & .row.od-gen-filter {
+                border-top: 1px solid #ccc;
+                margin: 1rem 0;
+                border-bottom: 1px solid #ccc;
+                min-width: 1090px;
+
+                & .card-body {
+
+                    & input {
+                        border: 1px solid #ccc;
+                        padding: 0.5rem 1rem;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &#startDateIp {
+                            width: 46%;
+                            margin-right: 1.2%;
+                        }
+                        
+                        &#endDateIp {
+                            width: 46%;
+                            margin-left: 1.25%;
+                        }
+                    }
+                    &.customer {
+                        padding-top: 0.88rem;
+                    }
+
+                    &.customer select#customerIp, &.sendStatus select#sendStatus {
+                        width: 100%;
+                    }
+                    &.sendTitle {
+                        & button {
+                            width: 30%;
+                            padding: 0.5rem;
+                            cursor: pointer;
+                            border: 1px solid #ccc;
+                        }
+                        & > .col-6 {
+                            margin-right: 0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .card-body {
+            & .table {
+                font-size: 14px;
+                min-width: 1400px;
+
+                & thead {
+                    & tr {
+                        & th {
+                            // 표제목 4음절
+                            &:not(:first-child) {
+                                min-width: 73px;
+                            }
+                            // 2음절
+                            &:nth-child(2) {
+                                min-width: 50px;
+                            }
+                            // 3음절
+                            &:nth-child(3), &:nth-child(4), &:nth-child(5),&:nth-child(7) {
+                                min-width: 61px;
+                            }
+                            // 6음절
+                            &:nth-child(13){
+                                min-width: 109px;
+                            }
+                            // 5음절
+                             &:nth-child(14){
+                                min-width: 85px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    select.select-manager {
+        border: 1px solid #e9ecef;
+        padding: 0.37rem;
+
+        &:focus {
+            border: 1px solid #e9ecef;
+            outline: none;
+        }
+    }
+}
+
+.send-management {
+    
+    & tbody tr {
+        cursor: pointer;
+    }
+}
+
+
+
+/*
+#################### order-new ####################
+*/
+
+.content.order-new, .content.send-management-detail {
+
+    & .container-fluid {
+
+        & .od-new {
+            min-width: 1100px;
+
+            // LEFT Setting Card
+            & .col-8 {
+
+                & .card {
+
+                    & .card-body {
+                        padding: 2rem 1.25rem;
+
+                        & .col-6 {
+
+                            & .row {
+
+                                & .col-6, & .col-3, & .col-8 {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    margin-bottom: 1rem;
+
+                                    & .click-obj {
+                                        & input, & div {
+                                            cursor: pointer;
+                                        }
+
+                                        & select {
+                                            width: 10rem;
+                                            padding: 0.4rem 2rem;
+                                            border: 1px solid #dee2e6;
+                                            border-radius: 0.2rem;
+                                            line-height: 1.5;
+                                            font-size: 0.875rem;
+
+                                            &:focus {
+                                                outline: #dee2e6;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                & .col-6:last-child {
+                                    justify-content: left;
+                                    padding-left: 0.5rem;
+                                }
+
+                                & .justify-content-end {
+                                    & label:last-child {
+                                        justify-content: left;
+                                    }
+                                }
+
+                                & .write-set {
+
+                                    &__ttl, &__cont {
+                                        display: block;
+                                        width: 100%;
+                                        padding: 0.3rem 0.85rem;
+                                        font-size: 0.875rem;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        color: #495057;
+                                        border-radius: 0.2rem;
+                                        border: 1px solid #dee2e6;
+                                    }
+                                    &__ttl {
+                                        margin: 0.6rem 0 1rem;
+                                    }
+                                    &__cont {
+                                        height: 10rem;
+                                    }
+                                    &__length {
+                                        font-size: 0.8rem;
+                                        text-align: right;
+                                        margin: 0.5rem 0 1rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .col-6.left {
+                            & .row {
+                                & .col-9 {
+                                    font-size: 14px;
+
+                                    & label.discountApply {
+                                        margin-right: 0;
+                                        vertical-align: middle;
+                                        display: flex;
+                                        align-items: flex-start;
+
+                                        & span {
+                                            margin: 0 0.44rem;
+                                        }
+
+                                        & input[name="discountApplyInput"] {
+                                            display: inline-block;
+                                            width: 50%;
+                                        }                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // RIGHT Preview Card
+            & .col-4 {
+
+                #couponPreview, #emailPreview, #colcAndButton {
+                    min-width: 470px;
+                }
+
+                & #couponPreview {
+
+                    & .card-body {
+                        padding: 2rem 1.25rem;
+                    }
+
+                    .coupon {
+                        width: 420px;
+                        margin: 1rem auto;
+                        border: 1px solid #ccc;
+
+                        & .row {
+                            margin: 0;
+                        }
+
+                        &__top {
+                            border-bottom: 1px solid #ccc;
+
+                            & img {
+                                width: 100%;
+                            }
+                        }
+                        
+                        &__mid {
+                            &__brand, &__goods {
+                                text-align: center;
+                            }
+
+                            &__brand {
+                                height: 20%;
+
+                                & img {
+                                    width: 100%;
+                                    max-height: 40px;
+                                }
+                            }
+                            &__goods {
+                                height: 80%;
+
+                                & img {
+                                    width: 100%;
+                                    max-width: 150px;
+                                }
+                            }
+
+                            &__brand p, &__goods p {
+                                margin: 0;
+                            }
+                            
+                            &__logo {
+                                border-left: 1px solid #ccc;
+                            }
+                            
+                            & .coupon__mid__barcode {
+                                width: 420px;
+                                text-align: center;
+                                border-top: 1px solid #ccc;
+                                border-bottom: 1px dotted #ccc;
+
+                                & img {
+                                    padding: 1rem 0;
+                                }
+                            }
+                        }
+                        &__btm {
+                            padding: 2rem 1rem 1rem;
+                        }
+                    }
+                }
+
+                & #emailPreview {
+
+                    & .card-body {
+                        padding: 2rem 1.25rem;
+                    }
+
+                    & .email {
+
+                        padding: 0 1rem;
+
+                        &__ttl {
+                            font-weight: 400;
+                        }
+
+                        &__cont {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                        
+                        &__coupon, &__useage {
+                            padding: 0;
+                        }
+
+                        &__coupon {
+                            padding: 0 1rem;
+
+                            &__wrap {
+                                border: 1px solid #ccc;
+                            }
+
+                            &__top {
+                                border-bottom: 1px solid #ccc;
+
+                                & img {
+                                    width: 100%;
+                                }
+                            }
+                            &__mid {
+                                margin: 0;
+
+                                & .col-6 {
+                                    border-bottom: 1px solid #ccc;
+                                }
+
+                                &__brand {
+                                    height: 20%;
+
+
+                                    & img {
+                                        width: 100%;
+                                        max-width: 96px;
+                                    }
+                                }
+                                &__goods {
+                                    height: 80%;
+
+                                    & img {
+                                        width: 100%;
+                                        max-width: 72px;
+                                    }
+                                }
+                                &__logo {
+                                    border-left: 1px solid #ccc;
+
+                                    & img {
+                                        width: 100%;
+                                    }
+                                }
+                                &__barcode {
+                                    width: 194px;
+                                    border-bottom: 1px dotted #ccc;
+
+                                    & img {
+                                        width: 100%;
+                                        padding: 0.6rem 1.4rem;
+                                    }
+                                }
+                            }
+                            &__btm {
+                                font-size: 10px!important;
+                                margin: 0;
+                                padding: 0.6rem 0.8rem 0;
+
+                            }
+                        }
+
+                        &__useage {
+
+                            & p {
+                                margin: 0;
+                            }
+                            & textarea {
+                                border: 0;
+                                width: 100%;
+                                font-size: 12px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    
+                }
+
+                & #colcAndButton {
+                    
+                    & .card-body {
+                        padding: 2rem 1.25rem;
+
+                        & .row:not(.sendSummary) {
+                            padding: 0 1rem;
+                            font-size: 14px;
+                        }
+                    }
+
+                    & .sendSummary {
+                        margin-bottom: 1rem;
+
+                        &__count {
+
+                            &__unit {
+                                font-weight: 700;
+                            }
+                        }
+                        &__total {
+
+                            &__unit, &__unit2, &__unit3, &__unit4 {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    & .btn {
+                        width: 10rem;
+                        height: 3rem;
+                        font-size: 1.25rem;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+/*
+#################### popup search ####################
+*/
+/*
+.content.popup-wrap {
+    font-family: ;
+}
+*/
+.row.popup {
+    & .card.od-gen {
+
+        & .card-header{
+            padding: 0 1.25rem;
+
+            & .row.od-gen-filter {
+                padding: 1rem 0;
+                border-top: 0;
+                min-width: unset;
+
+                & input.form-control {
+                    display: inline-block;
+                    width: 70%;
+                    margin-left: 1rem;
+                }
+                & button {
+                    border: 1px solid #ccc;
+                    padding: 0.25rem 1rem;
+                }
+
+                & .row {
+                    .col-6 {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        & .card-body{
+            table.table {
+                min-width: 728px;
+
+                & thead {
+                    & tr {
+
+                        & th:not(:first-child) {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                & tbody {
+
+                    & tr {
+                        cursor: pointer;
+
+                        & td:not(:first-child) {
+                            text-align: center;
+                        }
+                    }
+                    & img {
+                        width: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="../img/icons/icon-48x48.png" />
+	<title>이팝콘 신규 시안</title>
+	<link href="../css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+</head>
+<body>
+    <div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar"></nav>
+
+		<div class="main">
+			<nav id="navBar" class="navbar navbar-expand navbar-light navbar-bg"></nav>
+
+			<main class="content order-general">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">맞춤형쿠폰주문</h1>
+
+					<div class="row">
+						<div class="col-12">
+							<div class="card od-gen">
+								<div class="card-header">
+									<h5 class="card-title mb-0">검색조건</h5>
+									<div class="row od-gen-filter">
+										<div class="col-12 col-lg-6">
+											<div class="card-body sendStatus row d-flex align-items-center justify-content-end">
+												<p class="col-2 align-items-center d-flex justify-content-end m-0">발송상태</p>
+												<div class="col-9 custom-select">
+													<select name="" id="sendStatus">
+														<option value="임시저장">임시저장</option>
+														<option value="주문완료">주문완료</option>
+														<option value="정산확인">정산확인</option>
+														<option value="발송대기">발송대기</option>
+														<option value="발송완료">발송완료</option>
+														<option value="발송완료">발송취소</option>
+													</select>
+												</div>
+											</div>
+											<div class="card-body customer row d-flex align-items-center justify-content-end">
+												<p class="col-2 align-items-center d-flex justify-content-end m-0">고객사</p>
+												<div class="col-9 custom-select">
+													<select name="" id="customerIp">
+														<option value=""> 선택하세요 </option>
+														<option value="테스트고객사">테스트고객사</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-12 col-lg-6">
+											<div class="card-body date row">
+												<p class="col-2 align-items-center d-flex justify-content-end m-0">기간</p>
+												<div class="col-10">
+													<input type="date" name="" id="startDateIp">&nbsp;&#126;&nbsp;
+													<input type="date" name="" id="endDateIp">
+												</div>
+											</div>
+											<div class="card-body sendTitle row">
+												<p class="col-2 align-items-center d-flex justify-content-end m-0">발송명</p>
+												<div class="col-6">
+													<input type="text" id="snedTitle">
+												</div>
+												<button onclick="serchBtn('order_general')">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search align-middle"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+													<span>검색</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+
+									<h5 class="card-title mb-0">테이블</h5>
+									<div class="mb-3 tx-right">
+										<button class="btn bg-secondary text-white list-download-btn">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download align-middle"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+											<span>리스트 다운로드</span>
+										</button>
+										<button class="btn border-light-subtle ms-1" onclick="go2page('order_new')">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus align-middle"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+											<span>신규등록</span>
+										</button>
+									</div>
+
+									<table class="table table-hover my-0">
+										<thead>
+											<tr>
+												<th></th>
+												<th>번호</th>
+												<th>등록일</th>
+												<th>고객사</th>
+												<th>담당자</th>
+												<th>이벤트명</th>
+												<th>상품명</th>
+												<th>발송수량</th>
+												<th>발송금액</th>
+												<th>정산금액</th>
+												<th class="text-center">진행상태</th>
+												<th>발송시간</th>
+												<th class="text-center">발송완료리포트</th>
+												<th class="text-center">거래명세서</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>1</td>
+												<td>2023/01/01</td>
+												<td class="ellipsis-140">테스트 고객사 길이 테스트 고객사명이 길경우 생략지점 확인</td>
+												<td>테스터</td>
+												<td class="ellipsis-180">테스트이벤트 이벤트명 길이 테스트 이벤트 명이 길경우 생략지점 확인</td>
+												<td class="ellipsis-180">테스트상품 길이 테스트 상품명이 길 경우 생략지점 확인 </td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-fin">발송완료</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>2</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-canceled">발송취소</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>3</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-canceled">발송취소</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>4</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-canceled">발송취소</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>5</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-saved">임시저장</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>6</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-order-fin">주문완료</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>7</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-confirm">정산확인</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>8</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-send-wait">발송대기</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>9</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-fin">발송완료</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+											<tr>
+												<td><input class="form-check-input" type="checkbox" value=""></td>
+												<td>10</td>
+												<td>2023/01/01</td>
+												<td>테스트 고객사</td>
+												<td>테스터</td>
+												<td>테스트이벤트</td>
+												<td>테스트상품</td>
+												<td>10</td>
+												<td>&#8361; 2,000</td>
+												<td>&#8361; 2,000</td>
+												<td class="text-center"><span class="badge stat-fin">발송완료</span></td>
+												<td>2023/01/01 00:00:00</td>
+												<td class="text-center"><button class="btn border-light-subtle print-report">발행</button></td>
+												<td class="text-center"><button class="btn border-light-subtle print-statement">발행</button></td>
+											</tr>
+										</tbody>
+									</table>
+									
+									<div class="pagination-wrap">
+										<div class="pagination">
+											<button type="button" class="pagination__btn"></button>
+											<button type="button" class="pagination__btn active">1</button>
+											<button type="button" class="pagination__btn">2</button>
+											<button type="button" class="pagination__btn">3</button>
+											<button type="button" class="pagination__btn">4</button>
+											<button type="button" class="pagination__btn">5</button>
+											<button type="button" class="pagination__btn">6</button>
+											<button type="button" class="pagination__btn">7</button>
+											<button type="button" class="pagination__btn">8</button>
+											<button type="button" class="pagination__btn">9</button>
+											<button type="button" class="pagination__btn">10</button>
+											<button type="button" class="pagination__btn"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</main>
+
+			<footer class="footer"></footer>
+		</div>
+	</div>
+	<script src="../include/compHtml.js"></script>
+	<script src="../js/app.js"></script>
+	<script src="../js/common.js"></script>
+</body>
+</html>

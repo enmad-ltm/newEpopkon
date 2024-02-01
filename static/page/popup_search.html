@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="../img/icons/icon-48x48.png" />
+	<title>이팝콘 신규 시안</title>
+	<link href="../css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <main class="content popup-wrap">
+            <div class="container-fluid p-0">
+
+                <h1 class="h3 mb-3">일반쿠폰주문 > 신규등록 > 상품찾기</h1>
+
+                <div class="row popup">
+                    <div class="col-12">
+                        <div class="card od-gen">
+                            <div class="card-header">
+                                <div class="row od-gen-filter">
+
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <span>상품명</span>
+                                                <input class="form-control" type="text" name="search-goods">
+                                            </div>
+                                            <div class="col-6">
+                                                <span>브랜드명</span>
+                                                <input class="form-control" type="text" name="search-brand">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search align-middle"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                            <span>검색</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover my-0" id="goodsSearchTable">
+                                    <thead>
+                                        <tr>
+                                            <th>상품번호</th>
+                                            <th>상품이미지</th>
+                                            <th>브랜드</th>
+                                            <th>상품명</th>
+                                            <th style="min-width: 74px;">판매가격</th>
+                                            <th>유효일수</th>
+                                            <th>공급사</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="goodsTableBody"></tbody>
+                                </table>
+
+                                <div class="pagination-wrap">
+                                    <div class="pagination">
+                                        <button type="button" class="pagination__btn"></button>
+                                        <button type="button" class="pagination__btn active">1</button>
+                                        <button type="button" class="pagination__btn">2</button>
+                                        <button type="button" class="pagination__btn">3</button>
+                                        <button type="button" class="pagination__btn">4</button>
+                                        <button type="button" class="pagination__btn">5</button>
+                                        <button type="button" class="pagination__btn">6</button>
+                                        <button type="button" class="pagination__btn">7</button>
+                                        <button type="button" class="pagination__btn">8</button>
+                                        <button type="button" class="pagination__btn">9</button>
+                                        <button type="button" class="pagination__btn">10</button>
+                                        <button type="button" class="pagination__btn"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="../js/app.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/table.js"></script>
+    <script src="../js/search.js"></script>
+    <script type="text/javascript"></script>
+</body>
+</html>

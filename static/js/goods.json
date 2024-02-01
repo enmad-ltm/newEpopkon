@@ -1,0 +1,102 @@
+[
+    {
+        "goodsNum": "EP0000000001",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000802056/goods_img5.jpg",
+        "brandName" : "스타벅스",
+        "goodsName" : "[스타벅스] 쿨 라임 피지오 T",
+        "goodsPrice" : 5900,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "머니콘",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00013/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000002",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000185115/goods_img5.jpg",
+        "brandName" : "파리바게뜨",
+        "goodsName" : "파리바게뜨 교환권 25,000원",
+        "goodsPrice" : 25000,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00006/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000003",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000803443/goods_img5.jpg",
+        "brandName" : "도미노피자",
+        "goodsName" : "블랙타이거슈림프(오리지널)L+콜라1.25L",
+        "goodsPrice" : 39200,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00024/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000004",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000806067/goods_img5.jpg",
+        "brandName" : "카카오T",
+        "goodsName" : "[카카오 T] 포인트 이용권 10000P",
+        "goodsPrice" : 10000,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00208/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000005",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000806008/goods_img5.jpg",
+        "brandName" : "배스킨라빈스",
+        "goodsName" : "파인트 아이스크림",
+        "goodsPrice" : 9800,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00008/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum" : "EP0000000006",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000806183/goods_img5.jpg",
+        "brandName" : "BHC",
+        "goodsName" : "뿌링클+콜라1.25L",
+        "goodsPrice" : 23500,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00056/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000007",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000802803/goods_img5.jpg",
+        "brandName" : "네이버페이 상품권",
+        "goodsName" : "네이버페이 포인트 10,000원",
+        "goodsPrice" : 10000,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00192/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000008",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000802353/goods_img5.jpg",
+        "brandName" : "GS칼텍스",
+        "goodsName" : "GS칼텍스 주유쿠폰 10000원[G]",
+        "goodsPrice" : 10000,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00081/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000009",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000801577/goods_img5.jpg",
+        "brandName" : "SK주유권",
+        "goodsName" : "SK모바일주유권(1만원권)",
+        "goodsPrice" : 10000,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00089/mms_brand_thum_img.jpg"
+    },
+    {
+        "goodsNum":"EP0000000010",
+        "goodsImg" : "https://www.epopkon.com/Resource/images/goods//EP0000011667/goods_img5.jpg",
+        "brandName" : "LG유플러스,kt.com 홈페이지,T월드",
+        "goodsName" : "통합데이터 500MB",
+        "goodsPrice" : 10000,
+        "goodsSaleDate" : 60,
+        "goodsTradePlace" : "엠하우스",
+        "brandImg" : "https://www.epopkon.com/Resource/images/brand/BR00079/mms_brand_thum_img.jpg"
+    }
+]

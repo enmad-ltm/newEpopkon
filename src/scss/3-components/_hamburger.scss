@@ -4,34 +4,68 @@
   cursor: pointer;
   border-radius: 1px;
   height: 3px;
-  width: $hamburger-width-middle;
   background: $gray-700;
   display: block;
   content: '';
   transition: $transition-appearance-fast;
+
+  width: 100%;
+  transform: rotate(45deg);
+  
 }
 
 .hamburger {
   position: relative;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  transform: rotate(45deg);
 }
 
 .hamburger:before {
-  top: -7.5px;
-  width: $hamburger-width-top;
+  width: 100%;
   position: absolute;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  top: 0;
+  transform: rotate(-90deg);
 }
 
 .hamburger:after {
-  bottom: -7.5px;
-  width: $hamburger-width-bottom;
+  bottom: 0;
   position: absolute;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  width: 0;
+}
+
+nav.navbar.collapsed .hamburger {
+  width: 100%;
+  transform: unset;
+  
+
+  &:before {
+    top: -7.5px;
+    width: 100%;
+    transform: unset;
+  }
+  &:after {
+    width: 100%;
+    bottom: -7.5px;
+    transform: unset;
+  }
+
 }
 
 .sidebar-toggle:hover {
   .hamburger,
   .hamburger:before,
   .hamburger:after {
-    background: $primary;
+    background: #1c5da8;
   }
 }
 

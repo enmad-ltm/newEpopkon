@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="../img/icons/icon-48x48.png" />
+	<title>이팝콘 신규 시안</title>
+	<link href="../css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar"></nav>
+
+		<div class="main">
+			<!-- <nav data-include="./include/topnav.html"></nav> -->
+			<nav id="navBar" class="navbar navbar-expand navbar-light navbar-bg"></nav>
+
+			<main class="content order-new">
+				<div class="container-fluid p-0">
+
+                    <h1 class="h3 mb-3">신규등록</h1>
+                    
+					<div class="row od-new">
+						<div class="col-8">
+							<div class="card">
+								<div class="card-body row">
+									<h5 class="card-title mb-3">등록옵션</h5>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-3 fw-500">이벤트명</div>
+                                            <div class="col-8">
+                                                <div class="input-group">
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 fw-500">상품찾기</div>
+                                            <div class="col-8">
+                                                <div class="input-group click-obj">
+                                                    <input class="form-control" type="text" name="search-goods-new">
+                                                    <div class="input-group-text">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search align-middle"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 fw-500">브랜드</div>
+                                            <div class="col-8">
+                                                <div class="input-group">
+                                                    <input class="form-control" type="text" name="print-brand-new" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="row">
+                                                    <div class="col-6 fw-500">가격</div>
+                                                    <div class="col-6">
+                                                        <div class="input-group">
+                                                            <input class="form-control" type="text" name="print-price-new" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="row">
+                                                    <div class="col-6 fw-500">유효기간</div>
+                                                    <div class="col-6">
+                                                        <div class="input-group">
+                                                            <input class="form-control" type="text" name="print-date-new" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 fw-500">발신수단</div>
+                                            <div class="col-9 d-flex justify-content-start">
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="sending-method" value="문자" onchange="snedFrameSet(this)" checked>
+                                                    <span class="form-check-label">문자</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="sending-method" onchange="snedFrameSet(this)" value="이메일">
+                                                    <span class="form-check-label">이메일</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="sending-method" value="알림톡">
+                                                    <span class="form-check-label">알림톡</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 fw-500">독려여부</div>
+                                            <div class="col-9 d-flex justify-content-start">
+												<label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="encouraged-or-not" value="문자">
+                                                    <span class="form-check-label">유</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="encouraged-or-not" value="이메일">
+                                                    <span class="form-check-label">무</span>
+                                                </label>
+											</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-3 fw-500">발신번호</div>
+                                            <div class="col-8">
+												<div class="input-group">
+                                                    <input class="form-control" type="text">
+													<div class="input-group-text">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus align-middle"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                    </div>
+                                                </div>
+											</div>
+                                        </div>
+										<div class="row">
+											<div class="col-11 write-set">
+												<input type="text" class="write-set__ttl" onkeyup="dupTxt(this,'emailTtl')" placeholder="제목입력"></input>
+												<textarea class="write-set__cont" placeholder="내용입력" onkeyup="maxLengthCheck(this,1000)"></textarea>
+												<div class="write-set__length">
+													<span id="printLength"></span><span> / 1,000 byte</span>
+												</div>
+											</div>
+										</div>
+                                        <!-- <div class="row write-set">
+                                            <input type="text" class="form-control write-set__ttl" placeholder="제목입력"></input>
+                                            <input type="text" class="form-control write-set__cont" placeholder="내용입력"></input>
+                                        </div> -->
+                                    </div>
+
+									<div class="col-12">
+										<h5 class="card-title mb-3">등록상세</h5>
+										<div id="sendMsgTbl"></div>
+										<div id="sendEmailTbl" class="d-none"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-4">
+
+                            <div id="couponPreview" class="card row">
+                                <div class="card-body col-12">
+                                    <h5 class="card-title mb-3">미리보기</h5>
+									<div class="coupon">
+										<div class="coupon__top">
+											<div class="col-12">
+												<img src="../img/coupon-ttl.jpg" alt="">
+											</div>
+										</div>
+										<div class="coupon__mid row">
+											<div class="col-6 p-0 text-center">
+												<div class="col-12 coupon__mid__brand">
+													<!-- <img src="../img/mms_brand_thum_img.jpg" alt=""> -->
+												</div>
+												<div class="col-12 coupon__mid__goods">
+													<!-- <img src="../img/goods_img1.jpg" alt=""> -->
+												</div>
+											</div>
+											<div class="col-6 p-0 text-center">
+												<div class="coupon__mid__logo">
+													<img src="../img/mms_text_img.jpg" alt="">
+												</div>
+											</div>
+											<div class="col-12 coupon__mid__barcode">
+												<img src="../img/barcode.png" alt="">
+											</div>
+										</div>
+										<div class="coupon__btm row">
+											<div class="col-2 p-0">
+												<ul>
+													<li>상품명</li>
+													<li>교환처</li>
+													<li>유효기간</li>
+												</ul>
+											</div>
+											<div class="col-10">
+												<ul>
+
+													<li class="ellipsis-300">: <span class="coupon__btm__goods-name"></span></li>
+													<li class="ellipsis-300">: <span class="coupon__btm__exchange-place"></span></li>
+													<li class="ellipsis-300">: <span class="coupon__btm__exchange-period"></span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+                                </div>
+                            </div>
+
+                            <div id="emailPreview" class="card row d-none">
+                                <div class="card-body col-12">
+									<h5 class="card-title mb-3 fw-500">이메일 미리보기</h5>
+									<div class="row email">
+										<div class="col-3 fw-500">이메일 제목 : </div>
+										<div class="col-9 email__ttl" id="emailTtl"></div>
+										<div class="col-12 fw-500 mt-2"><span>내용</span><p class="email__cont"></p></div>
+										<div class="col-6 email__coupon">
+											<p class="fw-500 mb-0">쿠폰 이미지</p>
+											<div class="col-12 email__coupon__wrap">
+												<div class="email__coupon__top">
+													<img src="../img/coupon-ttl.jpg" alt="">
+												</div>
+												<div class="email__coupon__mid row">
+													<div class="col-6 p-0 text-center">
+														<div class="col-12 email__coupon__mid__brand">
+															<img src="../img/mms_brand_thum_img.jpg" alt="">
+														</div>
+														<div class="col-12 email__coupon__mid__goods">
+															<img src="../img/goods_img1.jpg" alt="">
+														</div>
+													</div>
+													<div class="col-6 p-0 text-center">
+														<div class="email__coupon__mid__logo">
+															<img src="../img/mms_text_img.jpg" alt="">
+														</div>
+													</div>
+													<div class="col-12 email__coupon__mid__barcode">
+														<img src="../img/barcode.png" alt="">
+													</div>
+												</div>
+												<div class="email__coupon__btm row">
+													<div class="col-3 p-0">
+														<ul>
+															<li>상품명</li>
+															<li>교환처</li>
+															<li>유효기간</li>
+														</ul>
+													</div>
+													<div class="col-9 p-0">
+														<ul>
+															<li class="ellipsis-300">: <span class="email__coupon__btm__goods-name">긴 상품명이 왔을때 생략처리되는 ellipsis-300 </span></li>
+															<li class="ellipsis-300">: <span class="email__coupon__btm__exchange-place">교환처도 길게작성될 수 있기 때문에 긴 교환처가 작성될때 생략처리되는 ellipsis-300</span></li>
+															<li class="ellipsis-300">: <span class="email__coupon__btm__exchange-period">2024-01-01 ~ 2024-12-31</span></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 email__useage">
+											<p class="fw-500">사용 방법</p>
+											<textarea name="" id="" cols="30" rows="16" readonly>- 상기 이미지는 연출된 것으로 실제와 다를 수 있습니다.
+												- 본 상품은 매장 재고 상황에 따라 동일 상품으로 교환이 불가능할 수 있습니다.
+												- 동일 상품 교환이 불가한 경우 다른 상품으로 교환이 가능합니다. (차액 발생 시 차액 지불)
+												- 매장 결제 시 본 상품 권면에 기재된 금액의 60% 이상을 결제한 후 남은 잔액은 회원의 계정에 등록된 스타벅스 카드나 보유하고 있는 무기명 스타벅스 카드에 충전됩니다.
+												- 스타벅스 카드를 등록 또는 보유하고 있지 않은 고객의 경우, 무기명 스타벅스 카드를 발급받아 잔액을 충전할 수 있습니다. (일부 매장 잔액 적립 불가)
+												- 스타벅스 앱의 사이렌 오더를 통해서도 주문 및 결제가 가능합니다. (일부 MD제외)
+												- 미군부대 매장, 워터파크 입점 매장 등 일부 매장에서는 사용이 불가합니다.
+												- 해당 쿠폰과 스타벅스 카드의 복합결제 거래는 스타벅스 카드의 고유 혜택인 Free Extra 및 별 적립은 적용 대상이 아닌 점 이용에 참고하시기 바랍니다.
+												- 정식 판매처 외의 장소나 경로를 통하여 구매하거나, 기타의 방법으로 보유하신 쿠폰은 정상적인 사용(환불, 재전송 등 포함)이 금지되거나 제한될 수 있으니 주의하시기 바랍니다.
+												</textarea>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                            
+                            <div id="colcAndButton" class="card row">
+                                <div class="card-body col-12">
+									<h5 class="card-title mb-3">발송 요약</h5>
+                                    <div class="row">
+										<div class="col-6">발송건수</div>
+										<div class="col-6">발송금액</div>
+									</div>
+									<div class="row sendSummary text-center">
+										<div class="col-6 sendSummary__count">
+											<span class="sendSummary__count__unit">123</span>
+											<span> 건</span>
+										</div>
+										<div class="col-6 sendSummary__total">
+											<span class="sendSummary__total__unit">5012000</span>
+											<span> 원</span>
+										</div>
+									</div>
+									<h5 class="card-title mb-3 mt-5">발송 선택</h5>
+									<div class="col-12 text-center">
+										<button class="btn bg-primary text-white" onclick="directSend()">즉시발송</button>
+										<button class="btn bg-warning text-white" onclick="requestSend()">발송요청</button>
+									</div>
+                                </div>
+                            </div>
+
+                        </div>
+					</div>
+
+				</div>
+			</main>
+
+			<footer class="footer"></footer>
+		</div>
+	</div>
+	<script src="../include/compHtml.js"></script>
+	<script src="../js/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.js"></script>
+    <script src="../js/common.js"></script>
+	<script src="../js/send.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function(){
+			function openPopup() {
+				var popup = window.open('../page/popup_search.html', 'goods-searching window', 'width=830px,height=560px,scrollbars=yes,top=100%,left=50,location=no, charset=UTF-8');
+			}
+			let searchingObj = document.querySelectorAll('.click-obj');
+			searchingObj.forEach(function(obj){
+				console.log("obj :",obj);				
+				obj.addEventListener("click", function(){
+					openPopup();
+				});
+			});
+
+			window.addEventListener('message', function(event){
+
+				// 상품찾기 - 상품 선택 => 상품정보기입 - 등록옵션
+				let PrintBrandNameInput = document.querySelector('input[name="print-brand-new"]');
+				let PrintGoodsPriceInput = document.querySelector('input[name="print-price-new"]');
+				let PrintGoodsSaleDateInput = document.querySelector('input[name="print-date-new"]');
+				let PrintGoodsNameInput = document.querySelector('input[name="search-goods-new"]');
+
+				// 상품찾기 - 상품 선택 => 상품정보기입 - 미리보기 쿠폰/알림톡
+				let PrintCouponBramdImg = document.querySelector('.coupon__mid__brand');
+				let PrintCouponGoodsImg = document.querySelector('.coupon__mid__goods');
+
+				let PrintCouponGoodsName = document.querySelector('.coupon__btm__goods-name');
+				let PrintCouponGoodsTradePlace = document.querySelector('.coupon__btm__exchange-place');
+				let PrintCouponGoodsSaleDate = document.querySelector('.coupon__btm__exchange-period');
+
+				// 상품찾기 - 상품 선택 => 상품정보기입 - 미리보기 이메일쿠폰
+				let PrintEmailCouponBramdImg = document.querySelector('.email__coupon__mid__brand');
+				let PrintEmailCouponGoodsImg = document.querySelector('.email__coupon__mid__goods');
+
+				let PrintEmailCouponGoodsName = document.querySelector('.email__coupon__btm__goods-name');
+				let PrintEmailCouponGoodsTradePlace = document.querySelector('.email__coupon__btm__exchange-place');
+				let PrintEmailCouponGoodsSaleDate = document.querySelector('.email__coupon__btm__exchange-period');
+
+				// 선택한 상품
+				let selGoods = event.data.value;
+
+				if ((selGoods && !PrintGoodsNameInput.value) || (selGoods && PrintGoodsNameInput.value)) {
+					console.log('선택상품정보: ',selGoods);
+
+					// 왼쪽 등록옵션값 변경
+					PrintGoodsNameInput.value = selGoods.goodsName;
+					PrintBrandNameInput.value = selGoods.brandName;
+					PrintGoodsPriceInput.value = selGoods.goodsPrice;
+					PrintGoodsSaleDateInput.value = selGoods.goodsSaleDate;
+					
+
+					// 미리보기 문자/알림톡
+					PrintEmailCouponBramdImg.innerHTML = '<img src="'+selGoods.bramdImg+'" />';
+					PrintEmailCouponGoodsImg.innerHTML = '<img src="'+selGoods.goodsImg+'" />';
+					PrintCouponGoodsName.innerText = selGoods.goodsName;
+					PrintCouponGoodsTradePlace.innerText = selGoods.goodsTradePlace;
+					PrintCouponGoodsSaleDate.innerText = selGoods.goodsSaleDate;
+
+					// 미리보기 이메일
+					PrintCouponBramdImg.innerHTML = '<img src="'+selGoods.bramdImg+'" />';
+					PrintCouponGoodsImg.innerHTML = '<img src="'+selGoods.goodsImg+'" />';
+					PrintEmailCouponGoodsName.innerText = selGoods.goodsName;
+					PrintEmailCouponGoodsTradePlace.innerText = selGoods.goodsTradePlace;
+					PrintEmailCouponGoodsSaleDate.innerText = selGoods.goodsSaleDate;
+
+					selectedGoodsInfo.brandName = selGoods.brandName;
+					selectedGoodsInfo.bramdImg = '<img src="'+selGoods.bramdImg+'" />';
+					selectedGoodsInfo.goodsName = selGoods.goodsName;
+					selectedGoodsInfo.goodsImg = '<img src="'+selGoods.goodsImg+'" />';
+					selectedGoodsInfo.goodsSaleDate = selGoods.goodsSaleDate;
+					selectedGoodsInfo.goodsPrice = selGoods.goodsPrice;
+					selectedGoodsInfo.goodsTradePlace = selGoods.goodsTradePlace;
+				}
+
+				// handleDataChange(event.data);
+				// brank
+				console.log('selGoods:',selGoods);
+				console.log('selectedGoodsInfo:',selectedGoodsInfo);
+			});
+		});
+
+	</script>
+</body>
+
+</html>

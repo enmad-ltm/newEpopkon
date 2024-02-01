@@ -29,14 +29,27 @@ const initializeSimplebar = () => {
 const initializeSidebarCollapse = () => {
   const sidebarElement = document.getElementsByClassName("js-sidebar")[0];
   const sidebarToggleElement = document.getElementsByClassName("js-sidebar-toggle")[0];
+  const topToggleLogo = document.querySelector('.logo-top');
+  const sidebarLogo = document.querySelector('.logo-fff');
+
+  const navEl = document.querySelector('nav.navbar');
+
 
   if(sidebarElement && sidebarToggleElement) {
     sidebarToggleElement.addEventListener("click", () => {
+
       sidebarElement.classList.toggle("collapsed");
+      topToggleLogo.classList.toggle("d-none");
+      sidebarLogo.classList.toggle("d-none-ani");
 
       sidebarElement.addEventListener("transitionend", () => {
         window.dispatchEvent(new Event("resize"));
       });
+
+      console.log('@@@@@@:', sidebarToggleElement);
+
+      navEl.classList.toggle('collapsed');
+
     });
   }
 }

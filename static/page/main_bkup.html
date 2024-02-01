@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="../img/icons/icon-48x48.png" />
+	<title>이팝콘 신규 시안</title>
+	<link href="../css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- 
+		<nav id="sidebar" class="sidebar js-sidebar collapsed">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="index.html">
+					<span class="align-middle logo-fff d-ani d-none-ani"><img src="img/logo-white.png" alt=""></span>
+				</a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Pages
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="index.html">
+							<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="pages-profile.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="pages-sign-in.html">
+							<i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="pages-sign-up.html">
+							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="pages-blank.html">
+							<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
+						</a>
+					</li>
+
+					<li class="sidebar-header">
+						Tools & Components
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-buttons.html">
+							<i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-forms.html">
+							<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-cards.html">
+							<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-typography.html">
+							<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="icons-feather.html">
+							<i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
+						</a>
+					</li>
+
+					<li class="sidebar-header">
+						Plugins & Addons
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="charts-chartjs.html">
+							<i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="maps-google.html">
+							<i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
+						</a>
+					</li>
+				</ul>
+				-->
+<!-- 
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Upgrade to Pro</strong>
+						<div class="mb-3 text-sm">
+							Are you looking for more components? Check out our premium version.
+						</div>
+						<div class="d-grid">
+							<a href="upgrade-to-pro.html" class="btn btn-primary">Upgrade to Pro</a>
+						</div>
+					</div>
+				</div>
+ -->
+			</div>
+		</nav>
+
+		<div class="main">
+			<!-- <nav data-include="./include/topnav.html"></nav> -->
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<!-- 
+				<a class="sidebar-toggle js-sidebar-toggle">
+					<i class="hamburger align-self-center"></i>
+				</a>
+				 -->
+				<a href="./main.html">
+					<img class="logo-top d-ani" src="../img/logo-origin.png" alt="">
+				</a>
+				<div class="navbar-collapse collapse">
+					<div class="navbar__menu">
+						<ul class="navbar__menu__ul">
+							<li class="navbar__menu__ul__li">
+								<a href="" class="navbar__menu__ul__li__a dropdown-toggle">주문관리</a>
+								<div class="dropdown-menu">
+									<div class="dropdown-menu__canvas">
+										<a href="./order_general.html" class="dropdown-menu__canvas__item">일반쿠폰주문</a>
+										<a href="" class="dropdown-menu__canvas__item">신세계주문</a>
+										<a href="" class="dropdown-menu__canvas__item">맞춤형쿠폰주문</a>
+										<a href="" class="dropdown-menu__canvas__item">실물상품주문</a>
+										<a href="./send_management.html" class="dropdown-menu__canvas__item">발송관리</a>
+										<a href="" class="dropdown-menu__canvas__item">견적서발행</a>
+									</div>
+								</div>
+							</li>
+							<li class="navbar__menu__ul__li">
+								<a href="" class="navbar__menu__ul__li__a dropdown-toggle">상품관리</a>
+								<div class="dropdown-menu">
+									<div class="dropdown-menu__canvas">
+										<a href="" class="dropdown-menu__canvas__item">상품조회</a>
+										<a href="" class="dropdown-menu__canvas__item">신규상품등록</a>
+										<a href="" class="dropdown-menu__canvas__item">연동상품등록</a>
+										<a href="" class="dropdown-menu__canvas__item">상품분류등록</a>
+									</div>
+								</div>
+							</li>
+							<li class="navbar__menu__ul__li">
+								<a href="" class="navbar__menu__ul__li__a dropdown-toggle">고객관리</a>
+								<div class="dropdown-menu">
+									<div class="dropdown-menu__canvas">
+										<a href="" class="dropdown-menu__canvas__item">고객사관리</a>
+										<a href="" class="dropdown-menu__canvas__item">협력사관리</a>
+										<a href="" class="dropdown-menu__canvas__item">견적가격결정</a>
+									</div>
+								</div>
+							</li>
+							<li class="navbar__menu__ul__li">
+								<a href="" class="navbar__menu__ul__li__a dropdown-toggle">정산관리</a>
+								<div class="dropdown-menu">
+									<div class="dropdown-menu__canvas">
+										<a href="" class="dropdown-menu__canvas__item">서비스판매관리</a>
+										<a href="" class="dropdown-menu__canvas__item">매출조회</a>
+										<a href="" class="dropdown-menu__canvas__item">수익률조회</a>
+										<a href="" class="dropdown-menu__canvas__item">협력사정산</a>
+										<a href="" class="dropdown-menu__canvas__item">고객사정산</a>
+									</div>
+								</div>
+							</li>
+							<li class="navbar__menu__ul__li">
+								<a href="" class="navbar__menu__ul__li__a dropdown-toggle">고객센터</a>
+								<div class="dropdown-menu">
+									<div class="dropdown-menu__canvas">
+										<a href="" class="dropdown-menu__canvas__item">1:1문의</a>
+										<a href="" class="dropdown-menu__canvas__item">공지사항등록</a>
+										<a href="" class="dropdown-menu__canvas__item">관리자답변</a>
+									</div>
+								</div>
+							</li>
+							<li class="navbar__menu__ul__li">
+								<a href="" class="navbar__menu__ul__li__a dropdown-toggle">기타</a>
+								<div class="dropdown-menu">
+									<div class="dropdown-menu__canvas">
+										<a href="" class="dropdown-menu__canvas__item">IMS추진일정</a>
+										<a href="" class="dropdown-menu__canvas__item">고객상담내역</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+								<i class="align-middle" data-feather="settings"></i>
+							</a>
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+								<span>최고관리자</span><span class="text-dark"> 님 반갑습니다.</span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="user"></i> 마이페이지</a>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="settings"></i> 관리자 설정</a>
+								<a class="dropdown-item" href="javascript:void(0)"><i class="align-middle me-1" data-feather="info"></i> 발송 잔액</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="../index.html"><i class="align-middle me-1" data-feather="log-out"></i> 로그 아웃</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content main">
+				<div class="container-fluid p-0">
+
+					<div class="row first-row">
+						<div class="col-12 col-lg-6 d-flex tbl-overflow">
+							<div class="card flex-fill tbl-minw-1100">
+								<div class="card-header">
+									<h5 class="card-title mb-0">나의 주문 내역</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>순번</th>
+											<th>날짜</th>
+											<th>이벤트명</th>
+											<th>상품명</th>
+											<th>수량</th>
+											<th>금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2023/01/01</td>
+											<td>가장 긴 이벤트명 길이가 늘어났을때 최소 사이즈를 지정하는 목적 이벤트명</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>스타벅스 이름 긴 상품명 무슨무슨 예가체프 커피향이 나는 커피</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>2023/01/01</td>
+											<td>테스트 이벤트</td>
+											<td>이벤트 상품</td>
+											<td>10</td>
+											<td>&#8361; 2,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="col-12 col-lg-6 d-flex tbl-overflow end">
+							<div class="card flex-fill tbl-minw-auto">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">나의 문의 내역</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>순번</th>
+											<th>날짜</th>
+											<th>문의 내용</th>
+											<th>답변 여부</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>2023/01/01</td>
+											<td>테스트 문의 내용</td>
+											<td>N</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-lg-6 d-flex tbl-overflow">
+							<div class="card flex-fill tbl-minw-auto">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">최근 본 상품</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>순번</th>
+											<th>날짜</th>
+											<th>브랜드</th>
+											<th>상품명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2023/01/01</td>
+											<td>스타벅스</td>
+											<td>스타벅스 아메리카노</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2023/01/01</td>
+											<td>BHC</td>
+											<td>BHC 치킨</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>2023/01/01</td>
+											<td>피자헛</td>
+											<td>새콤달콤 고구마L+콜라1.24L</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>2023/01/01</td>
+											<td>BBQ</td>
+											<td>황금올리브치킨반반+콜라1.25L</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>2023/01/01</td>
+											<td>굽네치킨</td>
+											<td>오리지널+갈비천왕+콜라1.25L</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>2023/01/01</td>
+											<td>CU</td>
+											<td>서울&#41;비요뜨초코링</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>2023/01/01</td>
+											<td>투썸플레이스</td>
+											<td>믹스드베리 마스카포네 생크림</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>2023/01/01</td>
+											<td>파리바게뜨</td>
+											<td>메리크리스마스 케이크</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="col-12 col-lg-6 d-flex tbl-overflow end">
+							<div class="card flex-fill tbl-minw-auto">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">공지사항</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>순번</th>
+											<th>날짜</th>
+											<th>공지사항</th>
+											<th>첨부파일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>2023/01/01</td>
+											<td>테스트 공지사항</td>
+											<td>N</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0"><a class="text-muted" href="" target="_blank"><strong>ePOPKON</strong></a> - Enjoy your coupon like a popcorn&nbsp;&copy;SYSCUSS</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="" target="_blank">문자발송</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="" target="_blank">모바일설문</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="" target="_blank">문자수신</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="" target="_blank">제세공과금</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<div class="direct-wrap">
+		<button onclick="showDirectMenu()" class="home-svg">
+			<!-- 
+			location.reload();
+			 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu align-middle">
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+			-->
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark align-middle">
+				<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+			</svg>
+        </button>
+		<div class="direct-menu-wrap">
+			<div class="direct-menu">
+				<a href="" class="direct-menu__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send align-middle"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+					<p>문자발송</p>
+				</a>
+				<a href="" class="direct-menu__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone align-middle"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+					<p>모바일설문</p>
+				</a>
+				<a href="" class="direct-menu__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail align-middle"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+					<p>문자수신(MO)</p>
+				</a>
+				<a href="" class="direct-menu__item">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-percent align-middle"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>
+					<p>제세공과금</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="../js/app.js"></script>
+	<script type="text/javascript">
+		function showDirectMenu() {
+			document.querySelector('.direct-menu-wrap').classList.toggle('show');
+		}
+	</script>
+<!-- 
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: "line",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Chrome", "Firefox", "IE"],
+					datasets: [{
+						data: [4306, 3801, 1689],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai"
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid "
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
+ -->
+</body>
+
+</html>

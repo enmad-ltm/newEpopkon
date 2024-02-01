@@ -1,5 +1,6 @@
 // Fonts
-$font-family-sans-serif: "Inter", "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+$font-family-sans-serif: "Pretendard Variable", Pretendard, "Inter", "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-bold: 600 !default;
@@ -303,7 +304,7 @@ $dropdown-bg: $white !default;
 $main-box-shadow: inset .75rem 0px 1.5rem 0px rgba($black, 0.075);
 
 // Content
-$content-padding-desktop: 3rem 3rem 1.5rem !default;
+$content-padding-desktop: 1.5rem 2rem 1.25rem !default;
 $content-padding-mobile: 1.5rem 1.5rem .75rem !default;
 
 // Datetimepicker
@@ -321,3 +322,28 @@ $hamburger-width-bottom: 16px !default;
 $stat-bg: lighten($primary, 35%) !default;
 $stat-icon-color: $primary !default;
 $stat-padding: $spacer * 0.75 !default;
+
+
+// favor class
+.tx-right {
+  text-align: right;
+}
+.d-none {
+  display: none;
+}
+.d-ani {
+  transition: all 0.2s;
+  visibility: visible;
+}
+.d-none-ani {
+  visibility: hidden;
+}
+.cursor-txt {
+  cursor: text!important;
+}
+.cursor-default {
+  cursor: unset!important;
+}
+.fw-500 {
+  font-weight: 500;
+}
